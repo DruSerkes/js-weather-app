@@ -1,0 +1,18 @@
+.WeeklyForecast {
+  background-color: rgba(68, 144, 192, 0.5);
+  border-radius: 6px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 8px 16px;
+}
+
+.WeeklyForecast>h5 {
+  margin: 8px 0;
+  text-transform: uppercase;
+}
+
+.WeeklyForecast hr {
+  height: 1px;
+  background-color: rgba(328, 344, 300, 0.5);
+  border: none;
+}

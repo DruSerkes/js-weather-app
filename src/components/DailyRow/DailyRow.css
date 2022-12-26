@@ -1,0 +1,24 @@
+.DailyRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.DailyRow-Left,
+.DailyRow-Right {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.DailyRow-Left {
+  width: 20%;
+}
+
+.DailyRow-Right {
+  width: 60%
+}
+
+.DailyRow img {
+  width: 25px;
+}

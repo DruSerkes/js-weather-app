@@ -59,3 +59,12 @@ export const getIconNameForWeatherCode = (code) => {
   if (code >= 71 && code <= 86) return "snowflake.svg"
   if (code >= 95) return "cloud-bolt.svg"
 }
+
+export const generateHourlyDataFromNow = (hourly, nowIndex) => {
+  return {
+    time: hourly.time.slice(nowIndex),
+    precipitation: hourly.precipitation.slice(nowIndex),
+    apparentTemperature: hourly.apparent_temperature.slice(nowIndex),
+    weathercode: hourly.weathercode.slice(nowIndex)
+  }
+}
