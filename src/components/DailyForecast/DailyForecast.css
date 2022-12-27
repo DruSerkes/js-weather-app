@@ -10,9 +10,3 @@
   margin: 8px 0;
   text-transform: uppercase;
 }
-
-.WeeklyForecast hr {
-  height: 1px;
-  background-color: rgba(328, 344, 300, 0.5);
-  border: none;
-}

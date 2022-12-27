@@ -9,22 +9,19 @@ export const DailyForecast = ({ forecast }) => {
   return (
     <section className="WeeklyForecast">
       <h5>7-day Forecast</h5>
-      {daily.time.map((time, idx) => {
-        return (
-          <div key={time}>
-            <hr />
-            <DailyRow
-              isToday={idx === 0}
-              temperature_2m_max={daily.temperature_2m_max[idx]}
-              temperature_2m_min={daily.temperature_2m_min[idx]}
-              time={time}
-              weathercode={daily.weathercode[idx]}
-              weeklyHigh={weeklyHigh}
-              weeklyLow={weeklyLow}
-            />
-          </div>
-        )
-      })}
+      {daily.time.map((time, idx) => (
+        <DailyRow
+          key={time}
+          isToday={idx === 0}
+          temperature_2m_max={daily.temperature_2m_max[idx]}
+          temperature_2m_min={daily.temperature_2m_min[idx]}
+          time={time}
+          weathercode={daily.weathercode[idx]}
+          weeklyHigh={weeklyHigh}
+          weeklyLow={weeklyLow}
+        />
+      )
+      )}
     </section>
   )
 };

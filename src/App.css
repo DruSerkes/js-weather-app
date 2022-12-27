@@ -1,3 +1,38 @@
 .App {
   padding-top: 1rem;
+  position: relative;
+  min-height: 100vmax;
+}
+
+.fetching {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  translate: -50% -50%;
+  width: max-content;
+}
+
+
+.fetching::after {
+  animation: ellipses 1.2s infinite forwards;
+  content: '';
+  width: 10px;
+}
+
+@keyframes ellipses {
+  0% {
+    content: ''
+  }
+
+  33% {
+    content: '.'
+  }
+
+  67% {
+    content: '..'
+  }
+
+  100% {
+    content: '...'
+  }
 }

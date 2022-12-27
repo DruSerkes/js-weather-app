@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { CurrentForecast } from './components/CurrentForecast/CurrentForecast';
 import { HourlyForecast } from './components/HourlyForecast/HourlyForecast';
+import { DailyForecast } from './components/DailyForecast/DailyForecast';
 
 import { createGeolocationError, getUserTimeZone } from './libs/utilsLib';
 import { fetchUserForecast } from './libs/weatherLib';
 import './App.css'
-import { DailyForecast } from './components/DailyForecast/DailyForecast';
 
 function App() {
   const [coords, setCoords] = useState({ latitude: null, longitude: null, timestamp: null });
@@ -40,20 +40,12 @@ function App() {
     getForecast();
   }, [coords]);
 
-
   return (
     <div className="App">
       {!!forecast && <CurrentForecast forecast={forecast} />}
       {!!forecast && <HourlyForecast forecast={forecast} />}
       {!!forecast && <DailyForecast forecast={forecast} />}
-      {!coords.timestamp && !error && "Fetching your weather forecast..."}
-
-      {/* {coords.timestamp && <div>
-        <p>Latitude: {coords.latitude}</p>
-        <p>Longitude: {coords.longitude}</p>
-        <p>Last fetched: {new Date(coords.timestamp).toTimeString()}</p>
-      </div>} */}
-
+      {!coords.timestamp && !error && <h2 className='fetching'>Fetching your weather forecast</h2>}
     </div>
   )
 }
