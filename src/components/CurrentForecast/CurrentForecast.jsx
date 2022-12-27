@@ -9,7 +9,7 @@ export const CurrentForecast = ({ forecast }) => {
       <p>{location}</p>
       <h1>{Math.round(forecast.current_weather.temperature)}</h1>
       <p>{generateWeatherCodeString(forecast.current_weather.weathercode) ?? ''}</p>
-      <p>H:{forecast.daily.apparent_temperature_max[0]}&deg; L:{forecast.daily.apparent_temperature_min[0]}&deg;</p>
+      <p>H:{Math.round(forecast.daily.apparent_temperature_max[0])}&deg; L:{Math.round(forecast.daily.apparent_temperature_min[0])}&deg;</p>
     </header>
   )
 };
