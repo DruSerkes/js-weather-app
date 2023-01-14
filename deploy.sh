@@ -26,4 +26,4 @@ git commit -m 'deploy'
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:druserkes/js-weather-app.git main:gh-pages
 
-# cd -
+cd -
