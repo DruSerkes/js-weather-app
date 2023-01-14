@@ -13,14 +13,14 @@ export const DailyRow = ({ time, weathercode, temperature_2m_max, temperature_2m
         <img src={icon} />
       </div>
       <div className="DailyRow-Right">
-        <span>Low: {temperature_2m_min}&deg;</span>
+        <span>{temperature_2m_min}&deg;</span>
         <WeeklyRelativityBar
           dayLow={temperature_2m_min}
           dayHigh={temperature_2m_max}
           upperBound={weeklyHigh}
           lowerBound={weeklyLow}
         />
-        <span>High: {temperature_2m_max}&deg;</span>
+        <span>{temperature_2m_max}&deg;</span>
       </div>
     </div>
   )
