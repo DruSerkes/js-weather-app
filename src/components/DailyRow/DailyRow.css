@@ -5,8 +5,8 @@
   justify-content: space-between;
 }
 
-.DailyRow-Left,
-.DailyRow-Right {
+/* .DailyRow-Right  */
+.DailyRow-Left {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -17,7 +17,24 @@
 }
 
 .DailyRow-Right {
-  width: 60%
+  width: 60%;
+  position: relative;
+}
+
+.DailyRow-Right span:first-child {
+  position: absolute;
+  left: 2.5%;
+}
+
+.DailyRow-Right div:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.DailyRow-Right span:last-child {
+  position: absolute;
+  right: 2.5%;
 }
 
 .DailyRow img {

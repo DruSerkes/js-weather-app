@@ -13,6 +13,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  --container-background-blue: hsla(203, 50%, 51%, 0.75);
+  --container-element-blue: hsla(203, 50%, 45%, .75);
 }
 
 a {

@@ -1,5 +1,5 @@
 .WeeklyForecast {
-  background-color: rgba(68, 144, 192, 0.5);
+  background-color: var(--container-background-blue);
   border-radius: 6px;
   margin-top: 1rem;
   margin-bottom: 2rem;

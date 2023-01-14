@@ -3,8 +3,8 @@ import './DailyForecast.css';
 
 export const DailyForecast = ({ forecast }) => {
   const { daily } = forecast;
-  const weeklyHigh = daily.temperature_2m_max.reduce((high, nextTemp) => nextTemp > high ? nextTemp : high, -Infinity);
-  const weeklyLow = daily.temperature_2m_max.reduce((low, nextTemp) => nextTemp < low ? nextTemp : low, Infinity);
+  const weeklyHigh = daily.temperature_2m_max.reduce((high, nextTemp) => Math.max(high, nextTemp), -Infinity);
+  const weeklyLow = daily.temperature_2m_min.reduce((low, nextTemp) => Math.min(low, nextTemp), Infinity);
 
   return (
     <section className="WeeklyForecast">
