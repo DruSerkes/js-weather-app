@@ -6,6 +6,8 @@ export const WeeklyRelativityBar = ({ lowerBound, upperBound, dayLow, dayHigh })
   const width = `${(dayHigh / upperBound * 100) - (left.slice(0, -1))}%`
   const gradientHigh = Math.round(Math.abs(dayHigh * (minSaturation / 100) - minSaturation));
   const gradientLow = Math.round(Math.abs(dayLow * (minSaturation / 100) - minSaturation));
+
+  // Taken From:  https://stackoverflow.com/questions/36721830/convert-hsl-to-rgb-and-hex
   function hslToHex(h, s, l) {
     l /= 100;
     const a = s * Math.min(l, 1 - l) / 100;
